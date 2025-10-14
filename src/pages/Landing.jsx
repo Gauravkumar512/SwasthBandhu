@@ -12,28 +12,36 @@ const team = [
     email: 'gauravskumar03@gmail.com', 
     skills: 'Frontend and Backend Developer ', 
     linkedin: 'Gaurav',
-    mobile: '8588069817' 
+    linkedinUrl: 'https://www.linkedin.com/in/gaurav-kumar-22592b30b/',
+    mobile: '8588069817',
+    avatar: '/src/pictures/Gaurav.png'
   },
   { 
     name: 'Dhruv Kesarwani', 
     email: 'dhruvkesarwani383@gmail.com', 
     skills: 'AI Agents and System Design', 
     linkedin: 'Dhruv',
-    mobile: '7080810684' 
+    linkedinUrl: 'https://www.linkedin.com/in/dhruv-kesarwani-97b72b342/',
+    mobile: '7080810684',
+    avatar: '/src/pictures/Dhruv.png'
   },
   { 
     name: 'Ayush Gupta', 
     email: 'ayushg2500@gmail.com', 
     skills: 'AI Agents and Deployment', 
     linkedin: 'Ayush',
-    mobile: '8171801471' 
+    linkedinUrl: 'https://www.linkedin.com/in/ayush-gupta-2a3582322/',
+    mobile: '8171801471',
+    avatar: '/src/pictures/Ayush.jpg'
   },
   { 
     name: 'Kushagra Srivastava', 
-    email: 'arjun.mehta@example.com', 
+    email: 'kushagrasrivastava123456@gmail.com', 
     skills: 'UI/UX Designer and Project Manager', 
     linkedin: 'Kushagra',
-    mobile: '6397011464' 
+    linkedinUrl: 'https://www.linkedin.com/in/kushagra-srivastava-a45b61213/',
+    mobile: '6397011464',
+    avatar: '/src/pictures/Kushagra.jpg'
   },
 ]
 
@@ -318,34 +326,39 @@ const Landing = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Top Navigation */}
-      <header className="bg-gradient-to-r from-primary-600 to-medical-600 text-white shadow">
+      <header className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center">
-            <div className="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center">
-              <Heart className="h-5 w-5 text-white" />
+            <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+              <Heart className="h-6 w-6 text-white" fill="currentColor" />
             </div>
-            <span className="ml-3 text-lg font-semibold">Hospital Management System</span>
+            <span className="ml-3 text-xl font-bold tracking-tight">SwasthBandhu</span>
           </div>
-          <nav className="flex items-center space-x-4">
-            <a href="#about" className="text-sm text-white/90 hover:text-white">About Us</a>
-            <Link to="/login" className="bg-white text-primary-700 hover:bg-gray-100 px-4 py-2 rounded-md text-sm font-medium">Login</Link>
+          <nav className="flex items-center space-x-6">
+            <a href="#news" className="text-sm font-medium text-white/90 hover:text-white transition-colors">Health News</a>
+            <a href="#hospitals" className="text-sm font-medium text-white/90 hover:text-white transition-colors">Find Hospitals</a>
+            <a href="#about" className="text-sm font-medium text-white/90 hover:text-white transition-colors">Our Team</a>
+            <Link to="/login" className="bg-white text-indigo-700 hover:bg-indigo-50 px-5 py-2 rounded-lg text-sm font-semibold shadow-md hover:shadow-lg transition-all">Login</Link>
           </nav>
         </div>
       </header>
 
       {/* Main - Latest Health News */}
       <main>
-        <section className="bg-gradient-to-b from-white to-primary-50">
-          <div className="max-w-7xl mx-auto px-6 py-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Latest Health News</h2>
+        <section id="news" className="bg-gradient-to-b from-blue-50 to-white py-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-3">Latest Health News</h2>
+              <p className="text-gray-600 text-lg">Stay updated with the latest healthcare developments</p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {news.map((n, idx) => (
-                <div key={idx} className="h-full rounded-lg p-5 bg-white shadow-sm border border-gray-100">
-                  <div className="text-xs uppercase tracking-wide text-primary-600 mb-2">{n.date}</div>
-                  <div className="text-lg font-semibold text-gray-900 mb-2">{n.title}</div>
-                  <div className="text-gray-700 text-sm">{n.summary}</div>
+                <div key={idx} className="group h-full rounded-xl p-6 bg-white shadow-md hover:shadow-2xl border border-gray-100 hover:border-indigo-200 transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="text-xs uppercase tracking-wide text-indigo-600 font-semibold mb-3">{n.date}</div>
+                  <div className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">{n.title}</div>
+                  <div className="text-gray-600 text-sm leading-relaxed">{n.summary}</div>
                 </div>
               ))}
             </div>
@@ -353,10 +366,14 @@ const Landing = () => {
         </section>
 
         {/* Top Hospitals Nearby */}
-        <section className="bg-white">
-          <div className="max-w-7xl mx-auto px-6 py-12">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-              <h2 className="text-2xl font-bold text-gray-900">Top Hospitals Nearby</h2>
+        <section id="hospitals" className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold text-gray-900 mb-3">Find Hospitals Near You</h2>
+              <p className="text-gray-600 text-lg">Discover nearby hospitals with real-time bed availability</p>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+              <h3 className="text-xl font-semibold text-gray-800">Search & Filter</h3>
               <div className="flex items-center gap-2 flex-wrap">
                 {realDataFailed && (
                   <span className="text-xs text-orange-600 bg-orange-100 px-2 py-1 rounded">
@@ -366,13 +383,13 @@ const Landing = () => {
                 {userLocation && (
                   <button 
                     onClick={() => fetchHospitalsFromOverpass(userLocation.lat, userLocation.lng)} 
-                    className="px-3 py-2 rounded-md text-sm bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-60" 
+                    className="px-4 py-2 rounded-lg text-sm bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-60 font-medium shadow-md hover:shadow-lg transition-all" 
                     disabled={isLoadingHospitals}
                   >
                     {isLoadingHospitals ? <RefreshCw className="h-4 w-4 animate-spin" /> : 'Refresh'}
                   </button>
                 )}
-                <button onClick={requestLocation} className="px-3 py-2 rounded-md text-sm bg-primary-600 text-white hover:bg-primary-700 disabled:opacity-60" disabled={isLocating}>
+                <button onClick={requestLocation} className="px-4 py-2 rounded-lg text-sm bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60 font-medium shadow-md hover:shadow-lg transition-all" disabled={isLocating}>
                   {isLocating ? 'Locating…' : 'Use my location'}
                 </button>
                 <input
@@ -396,7 +413,7 @@ const Landing = () => {
                   className="input-field w-32"
                 />
                 <button
-                  className="px-3 py-2 rounded-md text-sm bg-gray-800 text-white hover:bg-gray-900"
+                  className="px-4 py-2 rounded-lg text-sm bg-gray-800 text-white hover:bg-gray-900 font-medium shadow-md hover:shadow-lg transition-all"
                   onClick={() => {
                     const la = parseFloat(latInput)
                     const lo = parseFloat(lngInput)
@@ -421,8 +438,8 @@ const Landing = () => {
             )}
             {/* Map Section - Centered */}
             <div className="mb-8">
-              <div className="w-full h-96 overflow-hidden rounded-lg border mx-auto max-w-4xl">
-                <MapContainer center={defaultCenter} zoom={userLocation ? 12 : 5} className="w-full h-full">
+              <div className="w-full h-96 overflow-hidden rounded-2xl border-2 border-indigo-100 shadow-xl mx-auto max-w-4xl relative z-0">
+                <MapContainer center={defaultCenter} zoom={userLocation ? 12 : 5} className="w-full h-full z-0">
                   <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="&copy; OpenStreetMap contributors" />
                   {userLocation && (
                     <Marker position={[userLocation.lat, userLocation.lng]} icon={userIcon}>
@@ -458,12 +475,12 @@ const Landing = () => {
                   {realDataFailed ? 'No hospitals found in this area. Using fallback data.' : 'No hospitals within 200 km range'}
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {topHospitalsNearby.map(h => (
-                    <div key={h.id} className="p-4 border rounded-lg hover:bg-gray-50 transition">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="font-medium text-gray-900 text-lg">{h.name}</div>
-                        {h.isReal && <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Real</span>}
+                    <div key={h.id} className="group p-5 border-2 border-gray-200 rounded-xl hover:border-indigo-300 hover:shadow-xl bg-white transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition-colors">{h.name}</div>
+                        {h.isReal && <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold">Real</span>}
                       </div>
                       
                       <div className="space-y-1 mb-3">
@@ -516,7 +533,7 @@ const Landing = () => {
                           setUserLocation({ lat: h.latitude, lng: h.longitude }); 
                           setSelectedMarkerLabel(h.name) 
                         }} 
-                        className="w-full text-sm text-primary-600 hover:text-primary-700 inline-flex items-center justify-center py-2 border border-primary-200 rounded-md hover:bg-primary-50 transition"
+                        className="w-full text-sm text-white bg-indigo-600 hover:bg-indigo-700 inline-flex items-center justify-center py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all"
                       >
                         <LocateFixed className="h-4 w-4 mr-2" /> Mark on Map
                       </button>
@@ -530,37 +547,46 @@ const Landing = () => {
       </main>
 
       {/* Bottom - About Us */}
-      <section id="about" className="max-w-7xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">About Us</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((m, idx) => (
-            <div key={idx} className="bg-gray-800 text-white p-6 rounded-lg border border-gray-700 hover:bg-gray-750 transition">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+      <section id="about" className="bg-gradient-to-b from-white to-indigo-50 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-3">Meet Our Team</h2>
+            <p className="text-gray-600 text-lg">Passionate individuals dedicated to transforming healthcare</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((m, idx) => (
+              <div key={idx} className="group bg-white border-2 border-gray-200 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="flex items-center justify-center mb-4">
+                  <img 
+                    src={m.avatar} 
+                    alt={m.name}
+                    className="w-24 h-24 rounded-full border-4 border-indigo-100 shadow-lg group-hover:border-indigo-300 group-hover:scale-110 transition-all duration-300"
+                  />
                 </div>
-              </div>
-              <div className="text-lg font-semibold text-white mb-3 text-center">{m.name}</div>
+                <div className="text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-indigo-600 transition-colors">{m.name}</div>
               
-              <div className="space-y-2 mb-4">
-                <div className="text-sm text-gray-300 flex items-center">
-                  <Linkedin className="h-4 w-4 mr-2" />
-                  <span className="underline">LinkedIn: {m.linkedin}</span>
+                <div className="space-y-2 mb-4">
+                  <div className="text-sm text-gray-700 flex items-center justify-center">
+                    <Linkedin className="h-4 w-4 mr-2 flex-shrink-0 text-indigo-600" />
+                    <a href={m.linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition font-medium">
+                      LinkedIn Profile
+                    </a>
+                  </div>
+                  
+                  <div className="text-xs text-gray-600 flex items-start justify-center">
+                    <Mail className="h-3 w-3 mr-2 mt-0.5 flex-shrink-0 text-gray-500" />
+                    <span className="break-all">{m.email}</span>
+                  </div>
                 </div>
                 
-                <div className="text-sm text-gray-300 flex items-center">
-                  <Mail className="h-4 w-4 mr-2" />
-                  <span className="underline">{m.email}</span>
+                <div className="flex justify-center">
+                  <span className="inline-block px-4 py-2 text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 rounded-full group-hover:bg-indigo-100 transition-colors">
+                    {m.skills}
+                  </span>
                 </div>
               </div>
-              
-              <div className="flex justify-center">
-                <span className="inline-block px-3 py-1 text-xs font-medium text-purple-300 bg-transparent border border-purple-400 rounded-full">
-                  {m.skills}
-                </span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 

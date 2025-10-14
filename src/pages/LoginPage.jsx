@@ -32,6 +32,11 @@ const LoginPage = () => {
     setIsLoading(false)
   }
 
+  const handleAutoFill = () => {
+    setEmail('admin@hospital.com')
+    setPassword('admin123')
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
       <div className="w-full max-w-md">
@@ -39,6 +44,30 @@ const LoginPage = () => {
           <Heart className="h-10 w-10 text-primary-600 mx-auto mb-3" />
           <h2 className="text-2xl font-bold text-gray-900">System Administrator</h2>
           <p className="text-gray-600 text-sm">Sign in to continue</p>
+        </div>
+
+        {/* Demo Credentials Box */}
+        <div className="mb-4 p-4 bg-blue-50 border-2 border-blue-200 rounded-lg">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-sm font-semibold text-blue-900">Demo Credentials</h3>
+            <button
+              type="button"
+              onClick={handleAutoFill}
+              className="px-3 py-1.5 bg-blue-600 text-white text-xs font-medium rounded-md hover:bg-blue-700 transition-colors"
+            >
+              Auto Fill
+            </button>
+          </div>
+          <div className="space-y-1 text-sm">
+            <div className="flex items-center">
+              <span className="text-blue-700 font-medium w-20">Email:</span>
+              <span className="text-blue-900 font-mono">admin@hospital.com</span>
+            </div>
+            <div className="flex items-center">
+              <span className="text-blue-700 font-medium w-20">Password:</span>
+              <span className="text-blue-900 font-mono">admin123</span>
+            </div>
+          </div>
         </div>
 
         <div className="card">
