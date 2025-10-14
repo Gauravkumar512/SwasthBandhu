@@ -14,7 +14,7 @@ const team = [
     linkedin: 'Gaurav',
     linkedinUrl: 'https://www.linkedin.com/in/gaurav-kumar-22592b30b/',
     mobile: '8588069817',
-    avatar: '/src/pictures/Gaurav.png'
+    avatar: '/Gaurav.png'
   },
   { 
     name: 'Dhruv Kesarwani', 
@@ -23,7 +23,7 @@ const team = [
     linkedin: 'Dhruv',
     linkedinUrl: 'https://www.linkedin.com/in/dhruv-kesarwani-97b72b342/',
     mobile: '7080810684',
-    avatar: '/src/pictures/Dhruv.png'
+    avatar: '/Dhruv.png'
   },
   { 
     name: 'Ayush Gupta', 
@@ -32,7 +32,7 @@ const team = [
     linkedin: 'Ayush',
     linkedinUrl: 'https://www.linkedin.com/in/ayush-gupta-2a3582322/',
     mobile: '8171801471',
-    avatar: '/src/pictures/Ayush.jpg'
+    avatar: '/Ayush.jpg'
   },
   { 
     name: 'Kushagra Srivastava', 
@@ -41,7 +41,7 @@ const team = [
     linkedin: 'Kushagra',
     linkedinUrl: 'https://www.linkedin.com/in/kushagra-srivastava-a45b61213/',
     mobile: '6397011464',
-    avatar: '/src/pictures/Kushagra.jpg'
+    avatar: '/Kushagra.jpg'
   },
 ]
 
