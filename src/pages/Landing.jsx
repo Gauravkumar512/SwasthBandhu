@@ -15,7 +15,7 @@ const team = [
     mobile: '8588069817' 
   },
   { 
-    name: 'rwani', 
+    name: 'Dhruv Kesarwani', 
     email: 'dhruvkesarwani383@gmail.com', 
     skills: 'AI Agents and System Design', 
     linkedin: 'Dhruv',
