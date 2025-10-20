@@ -19,6 +19,8 @@ Provides actionable dashboards to improve hospital readiness and patient care
 
 This system empowers hospital administrators and staff to make data-driven, proactive decisions instead of reacting to crises after they occur.
 
+
+
 ⚙️ Key Features
 
 🧠 AI Analytics (Mock) – Festival-based surge predictions, AQI health trends, and outbreak alerts
@@ -35,21 +37,26 @@ This system empowers hospital administrators and staff to make data-driven, proa
 
 🌐 Communication Hub – Hospital-to-hospital messaging and emergency broadcasts
 
+
+
+
 🚀 Setup
 git clone https://github.com/yourusername/hospital-management-system.git
+
 cd hospital-management-system
+
 npm install
+
 npm run dev
 
 
-For production:
-
-npm run build
 
 👤 Demo Login
 Role	Email	Password
 Admin	admin@hospital.com
 	admin123
+
+
 
 
 🤝 Contributing
@@ -68,3 +75,4 @@ Licensed under the MIT License
 
 Built with ❤️ for better healthcare in India
 #SwasthBandhu #AIHealthcare #DigitalIndia
+
