@@ -1,24 +1,20 @@
 🏥 SwasthBandhu – AI-Powered Hospital Management System
-
 SwasthBandhu is an AI-powered hospital management system designed to help Indian hospitals handle patient surges, resource shortages, and emergency coordination during festivals, pollution spikes, and epidemics.
+
 
 
 💡 Solution
 
 Indian hospitals often face unpredictable challenges — from increased respiratory cases during pollution to sudden patient surges at festivals.
-
 SwasthBandhu provides an intelligent, centralized platform that helps hospitals stay prepared and respond faster.
 
 
 🔍 What It Does
+
 Predicts and analyzes healthcare trends using AI (currently mock data, to be upgraded soon)
-
 Optimizes resources like beds, staff, and medicines in real time
-
 Automates emergency communication between hospitals
-
 Provides actionable dashboards to improve hospital readiness and patient care
-
 This system empowers hospital administrators and staff to make data-driven, proactive decisions instead of reacting to crises after they occur.
 
 
@@ -70,4 +66,5 @@ Licensed under the MIT License
 
 Built with ❤️ for better healthcare in India
 #SwasthBandhu #AIHealthcare #DigitalIndia
+
 
